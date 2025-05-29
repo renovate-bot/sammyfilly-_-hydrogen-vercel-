@@ -13,13 +13,13 @@ dependencies:
     version: 3.48.0(@types/node@20.4.9)(@types/react@18.0.20)(typescript@4.9.5)(zod@3.21.4)
   '@shopify/cli-hydrogen':
     specifier: ^5.1.2
-    version: 5.1.2(@babel/core@7.22.10)(@remix-run/react@1.19.1)(@shopify/hydrogen-react@2023.7.1)(@shopify/remix-oxygen@1.1.3)(@types/node@20.4.9)(@types/react@18.0.20)(graphql@16.8.1)
+    version: 5.1.2(@babel/core@7.22.10)(@remix-run/react@1.19.1)(@shopify/hydrogen-react@2023.7.1)(@shopify/remix-oxygen@3.0.0)(@types/node@20.4.9)(@types/react@18.0.20)(graphql@16.8.1)
   '@shopify/hydrogen':
     specifier: ^2023.7.2
     version: 2023.7.2(@remix-run/react@1.19.1)(@remix-run/server-runtime@1.19.1)(@types/react@18.0.20)(react-dom@18.2.0)
   '@shopify/remix-oxygen':
-    specifier: ^1.1.3
-    version: 1.1.3(@shopify/oxygen-workers-types@3.17.3)
+    specifier: ^3.0.0
+    version: 3.0.0(@shopify/oxygen-workers-types@3.17.3)(react-router@7.6.0)
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
@@ -3216,7 +3216,7 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
 
-  /@shopify/cli-hydrogen@5.1.2(@babel/core@7.22.10)(@remix-run/react@1.19.1)(@shopify/hydrogen-react@2023.7.1)(@shopify/remix-oxygen@1.1.3)(@types/node@20.4.9)(@types/react@18.0.20)(graphql@16.8.1):
+  /@shopify/cli-hydrogen@5.1.2(@babel/core@7.22.10)(@remix-run/react@1.19.1)(@shopify/hydrogen-react@2023.7.1)(@shopify/remix-oxygen@3.0.0)(@types/node@20.4.9)(@types/react@18.0.20)(graphql@16.8.1):
     resolution: {integrity: sha512-CUawEe63C6kVhtF2qFiiTSWX1sdHTu3oaVXzsYXtRGxZH4H5YexTh6xbpdo893Nyoje/shyRoMWK3jN/reTllg==}
     engines: {node: '>=16.13'}
     hasBin: true
@@ -3234,7 +3234,7 @@ packages:
       '@shopify/hydrogen-codegen': 0.0.2(graphql@16.8.1)
       '@shopify/hydrogen-react': 2023.7.1(@types/react@18.0.20)(react-dom@18.2.0)(react@18.2.0)
       '@shopify/mini-oxygen': 1.7.0
-      '@shopify/remix-oxygen': 1.1.3(@shopify/oxygen-workers-types@3.17.3)
+      '@shopify/remix-oxygen': 3.0.0(@shopify/oxygen-workers-types@3.17.3)(react-router@7.6.0)
       ansi-escapes: 6.2.0
       diff: 5.1.0
       fast-glob: 3.3.1
@@ -3480,13 +3480,14 @@ packages:
     resolution: {integrity: sha512-5ugCL9sPGzmOaZjeRGaWUWhHgAbemrS6z+R7v6gwiD+BiqSeoFhIY+imLpfdFCVpuOGalpHeCv6o3gv++EHs0A==}
     dev: true
 
-  /@shopify/remix-oxygen@1.1.3(@shopify/oxygen-workers-types@3.17.3):
-    resolution: {integrity: sha512-uKWG/JIlb2U/6j20KjR6PIA56f5AL10jhenHqvn3bKbwLfLaZncBkBG9v6lDz02dMXBHIo66idvuM67RODoxjg==}
+  /@shopify/remix-oxygen@3.0.0(@shopify/oxygen-workers-types@3.17.3)(react-router@7.6.0):
+    resolution: {integrity: sha512-dMEM2FJPo6f/+0q/knJruGXeDjVNen2ADrTX+3QDdced06suQ3bZLQUEsq5J04Nqm091bvhvPtUkFO/Bd5g06g==}
     peerDependencies:
-      '@shopify/oxygen-workers-types': ^3.17.3
+      '@shopify/oxygen-workers-types': ^3.17.3 || ^4.1.2
+      react-router: 7.6.0
     dependencies:
-      '@remix-run/server-runtime': 1.19.1
       '@shopify/oxygen-workers-types': 3.17.3
+      react-router: 7.6.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@sindresorhus/is@4.6.0:
@@ -5000,6 +5001,11 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+
+  /cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
+    dev: false
 
   /core-js-compat@3.32.0:
     resolution: {integrity: sha512-7a9a3D1k4UCVKnLhrgALyFcP7YCsLOQIxPd0dKjf/6GuPcgyiGP70ewWdCGrSK7evyhymi0qO4EqCmSJofDeYw==}
@@ -9700,6 +9706,22 @@ packages:
     dependencies:
       '@remix-run/router': 1.7.2
       react: 18.2.0
+    dev: false
+
+  /react-router@7.6.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-GGufuHIVCJDbnIAXP3P9Sxzq3UUsddG3rrI3ut1q6m0FI6vxVBF3JoPQ38+W/blslLH4a5Yutp8drkEpXoddGQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+    dependencies:
+      cookie: 1.0.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      set-cookie-parser: 2.6.0
     dev: false
 
   /react@18.2.0:
