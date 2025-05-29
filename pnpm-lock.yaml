@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.12.6
     version: 2.12.6(graphql@16.8.1)
   isbot:
-    specifier: ^3.6.6
-    version: 3.6.6
+    specifier: ^5.0.0
+    version: 5.1.28
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -7392,9 +7392,9 @@ packages:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
     dev: true
 
-  /isbot@3.6.6:
-    resolution: {integrity: sha512-98aGl1Spbx1led422YFrusDJ4ZutSNOymb2avZ2V4BCCjF3MqAF2k+J2zoaLYahubaFkb+3UyvbVDVlk/Ngrew==}
-    engines: {node: '>=12'}
+  /isbot@5.1.28:
+    resolution: {integrity: sha512-qrOp4g3xj8YNse4biorv6O5ZShwsJM0trsoda4y7j/Su7ZtTTfVXFzbKkpgcSoDrHS8FcTuUwcU04YimZlZOxw==}
+    engines: {node: '>=18'}
     dev: false
 
   /iserror@0.0.2:
