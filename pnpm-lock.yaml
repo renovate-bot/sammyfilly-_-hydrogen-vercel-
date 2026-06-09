@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^8.2.0
     version: 8.2.0(postcss@8.4.31)
   prettier:
-    specifier: ^2.8.4
-    version: 2.8.4
+    specifier: ^3.0.0
+    version: 3.8.4
   tailwindcss:
     specifier: ^3.3.0
     version: 3.3.0(postcss@8.4.31)
@@ -9495,6 +9495,12 @@ packages:
     resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+
+  /prettier@3.8.4:
+    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /pretty-ms@7.0.1:
     resolution: {integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==}
